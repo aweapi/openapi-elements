@@ -1,6 +1,6 @@
 # OpenApi PHP Objects
 
-<p style="text-align: center">
+<p align="center">
 
 [![Build Status][ico-travis]][link-travis]
 [![Code Coverage][ico-scrutinizer]][link-scrutinizer]
