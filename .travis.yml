@@ -28,4 +28,4 @@ script:
   - make lint
 
 after_script:
-  - if [[ MEASURE_COVERAGE == 'true' ]]; then make upload-coverage ; fi
+  - if [[ $MEASURE_COVERAGE == 'true' ]]; then make upload-coverage ; fi
