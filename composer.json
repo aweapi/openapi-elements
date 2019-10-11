@@ -1,0 +1,44 @@
+{
+  "name": "waspes/objects",
+  "description": "OpenApi PHP Objects",
+  "license": "MIT",
+  "homepage": "https://github.com/waspes/objects",
+  "keywords": ["openapi", "php"],
+  "authors": [
+    {
+      "name": "Veaceslav Medvedev",
+      "email": "slavcopost@gmail.com",
+      "homepage": "https://github.com/slavcodev"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": "^7.2",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.15",
+    "phpunit/phpunit": "^8.4",
+    "psalm/plugin-phpunit": "^0.7",
+    "scrutinizer/ocular": "^1.6",
+    "vimeo/psalm": "^3.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Waspes\\Objects\\": ["src"]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Waspes\\Tests\\Objects\\": ["tests"]
+    }
+  },
+  "scripts": {},
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
