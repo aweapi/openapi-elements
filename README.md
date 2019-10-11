@@ -1,23 +1,28 @@
 # OpenApi PHP Objects
 
+<p style="text-align: center">
+
 [![Build Status][ico-travis]][link-travis]
 [![Code Coverage][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
-
-[![Software License][ico-license]][link-license]
+[![PHP Version][ico-dependencies]][link-github]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![PHP Version][ico-php-version]][link-github]
+[![Software License][ico-license]][link-license]
+
+</p>
 
 ## Usage
 
 *TBD*
 
-[ico-version]: https://img.shields.io/packagist/v/waspes/objects.svg?style=for-the-badge&label=Latest
-[ico-php-version]: https://img.shields.io/packagist/php-v/waspes/objects.svg?style=for-the-badge
-[ico-license]: https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge
-[ico-travis]: https://img.shields.io/travis/waspes/objects.svg?style=for-the-badge&logo=travis
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/waspes/objects.svg?style=for-the-badge&logo=scrutinizer
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/waspes/objects.svg?style=for-the-badge&logo=scrutinizer
+[ico-version]: https://img.shields.io/github/tag/waspes/objects.svg?style=flat-square&label=latest
+[ico-php-version]: https://img.shields.io/packagist/php-v/waspes/objects.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/waspes/objects.svg?style=flat-square&logo=travis
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/waspes/objects.svg?style=flat-square&logo=scrutinizer
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/waspes/objects.svg?style=flat-square&logo=scrutinizer
+[ico-dependencies]: https://img.shields.io/badge/dependencies-0-brightgreen.svg?style=flat-square&logo=scrutinizer
 
 [link-packagist]: https://packagist.org/packages/waspes/objects
 [link-github]: https://github.com/waspes/objects
