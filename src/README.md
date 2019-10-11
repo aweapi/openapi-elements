@@ -1,0 +1,36 @@
+# Check list
+
+- [x] OpenAPI Object
+- [x] Info Object
+- [x] Contact Object
+- [x] License Object
+- [x] Server Object
+- [x] Server Variable Object
+- [x] Components Object
+- [x] Paths Object
+- [x] Path Item Object
+- [x] Operation Object
+- [x] External Documentation Object
+- [x] Parameter Object
+- [x] Request Body Object
+- [x] Media Type Object
+- [x] Encoding Object
+- [x] Responses Object
+- [x] Response Object
+- [x] Callback Object
+- [x] Example Object
+- [x] Link Object
+- [x] Header Object
+- [x] Tag Object
+- [x] Reference Object (not extendable)
+- [ ] Schema Object
+    - [x] MVP
+- [x] Discriminator Object (not extendable)
+- [ ] ~~XML Object~~
+- [x] Security Scheme Object
+- [x] OAuth Flows Object
+- [x] OAuth Flow Object
+- [x] Security Requirement Object (not extendable)
+- [x] Extension fields
+- [x] Collection of objects
+- [x] Map

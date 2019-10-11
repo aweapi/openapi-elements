@@ -25,6 +25,7 @@ script:
   # PHPUnit
   - if [[ $EXECUTE_COVERAGE == 'true' ]]; then make report-coverage ; fi
   - if [[ $EXECUTE_COVERAGE != 'true' ]]; then make test ; fi
+  - make lint
 
 after_script:
-  - if [[ MEASURE_COVERAGE == 'true' ]]; then upload-coverage ; fi
+  - if [[ MEASURE_COVERAGE == 'true' ]]; then make upload-coverage ; fi
