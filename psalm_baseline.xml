@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file src="tests/TestCase.php">
+    <NonStaticSelfCall occurrences="1"/>
+  </file>
+</files>
