@@ -44,7 +44,7 @@ final class Header extends Parameter implements HeaderAggregate
             // The field `name` MUST NOT be specified, it is given in the corresponding headers map.
             $fields['name'],
             // The field `in` MUST NOT be specified, it is implicitly in `header`.
-            $fields['in'],
+            $fields['in']
         );
 
         return $fields;
