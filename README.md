@@ -15,10 +15,10 @@
 [ico-version]: https://img.shields.io/github/tag/aweapi/openapi-elements.svg?style=flat-square&label=latest
 [ico-php-version]: https://img.shields.io/packagist/php-v/aweapi/openapi-elements.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/aweapi/openapi-elements.svg?style=flat-square&logo=travis
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/aweapi/openapi-elements.svg?style=flat-square&logo=scrutinizer
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/aweapi/openapi-elements.svg?style=flat-square&logo=scrutinizer
-[ico-dependencies]: https://img.shields.io/badge/dependencies-0-brightgreen.svg?style=flat-square&logo=scrutinizer
+[ico-travis]: https://img.shields.io/travis/aweapi/openapi-elements.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/aweapi/openapi-elements.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/aweapi/openapi-elements.svg?style=flat-square
+[ico-dependencies]: https://img.shields.io/badge/dependencies-0-brightgreen.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/aweapi/openapi-elements
 [link-github]: https://github.com/aweapi/openapi-elements
