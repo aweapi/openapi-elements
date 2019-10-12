@@ -1,8 +1,8 @@
 {
-  "name": "waspes/objects",
+  "name": "aweapi/openapi-elements",
   "description": "OpenApi PHP Objects",
   "license": "MIT",
-  "homepage": "https://github.com/waspes/objects",
+  "homepage": "https://github.com/aweapi/openapi-elements",
   "keywords": ["openapi", "php"],
   "authors": [
     {
