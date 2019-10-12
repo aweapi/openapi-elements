@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Waspes\Tests\Objects\SecurityScheme;
+namespace Aweapi\Tests\Openapi\SecurityScheme;
 
-use Waspes\Objects\SecurityScheme\OpenIdConnectSecurityScheme;
-use Waspes\Tests\Objects\TestCase;
+use Aweapi\Openapi\Objects\SecurityScheme\OpenIdConnectSecurityScheme;
+use Aweapi\Tests\Openapi\TestCase;
 
 final class OpenIdConnectSecuritySchemeTest extends TestCase
 {
