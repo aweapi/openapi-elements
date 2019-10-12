@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Waspes\Objects;
+namespace Aweapi\Openapi;
 
 use JsonSerializable;
 use stdClass;

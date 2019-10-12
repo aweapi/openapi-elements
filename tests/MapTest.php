@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Waspes\Tests\Objects;
+namespace Aweapi\Tests\Openapi;
 
 use ArrayIterator;
-use Waspes\Objects\Map;
+use Aweapi\Openapi\Map;
 
 final class MapTest extends TestCase
 {

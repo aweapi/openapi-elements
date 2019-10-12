@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Waspes\Tests\Objects;
+namespace Aweapi\Tests\Openapi;
 
 use ArrayIterator;
 

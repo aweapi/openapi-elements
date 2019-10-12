@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Waspes\Tests\Objects;
+namespace Aweapi\Tests\Openapi;
 
+use Aweapi\Openapi\JsonObject;
 use stdClass;
-use Waspes\Objects\JsonObject;
 
 final class JsonObjectTest extends TestCase
 {

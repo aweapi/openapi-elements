@@ -27,12 +27,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Waspes\\Objects\\": ["src"]
+      "Aweapi\\Openapi\\": ["src"]
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Waspes\\Tests\\Objects\\": ["tests"]
+      "Aweapi\\Tests\\Openapi\\": ["tests"]
     }
   },
   "scripts": {},
