@@ -17,7 +17,7 @@ final class OpenIdConnectSecuritySchemeTest extends TestCase
         $object = $this->createOpenIdConnectSecurityScheme(
             'https://example.com/api/oauth',
             'Description',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'type' => OpenIdConnectSecurityScheme::TYPE_OPEN_ID_CONNECT,

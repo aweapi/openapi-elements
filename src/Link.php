@@ -31,7 +31,7 @@ final class Link extends ValueObject implements LinkAggregate
         array $parameters = [],
         $requestBody = null,
         Server $server = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         if (!empty($operationId) && !empty($operationRef)) {
             throw new InvalidArgumentException('The Link operationId and operationRef are mutually exclusive');

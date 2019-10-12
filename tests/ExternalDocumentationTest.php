@@ -14,7 +14,7 @@ final class ExternalDocumentationTest extends TestCase
         $object = $this->createExternalDocumentation(
             'https://example.com/docs',
             'Description',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'url' => 'https://example.com/docs',

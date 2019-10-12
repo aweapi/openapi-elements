@@ -16,7 +16,7 @@ final class ExampleTest extends TestCase
             'Description',
             'Code',
             'https://example.com/code',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'summary' => 'Summary',

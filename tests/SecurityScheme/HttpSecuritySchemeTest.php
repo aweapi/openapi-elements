@@ -18,7 +18,7 @@ final class HttpSecuritySchemeTest extends TestCase
             'basic',
             'JWT',
             'Description',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'type' => HttpSecurityScheme::TYPE_HTTP,

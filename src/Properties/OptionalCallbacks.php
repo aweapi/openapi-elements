@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Waspes\Objects\Properties;
 
-use Waspes\Objects\CallbackRequestMap;
+use Waspes\Objects\CallbackRequests;
 
 trait OptionalCallbacks
 {
     private $callbacks;
 
-    public function getCallbacks(): CallbackRequestMap
+    public function getCallbacks(): CallbackRequests
     {
         return $this->callbacks;
     }

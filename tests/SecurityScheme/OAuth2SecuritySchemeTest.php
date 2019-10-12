@@ -17,7 +17,7 @@ final class OAuth2SecuritySchemeTest extends TestCase
         $object = $this->createOAuth2SecurityScheme(
             $this->createOAuthFlows($this->createOAuthFlow([])),
             'Description',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'type' => OAuth2SecurityScheme::TYPE_OAUTH2,

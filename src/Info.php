@@ -26,7 +26,7 @@ final class Info extends ValueObject
         string $termsOfService = null,
         Contact $contact = null,
         License $license = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->title = $title;
         $this->version = $version;

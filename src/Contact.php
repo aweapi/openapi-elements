@@ -17,7 +17,7 @@ final class Contact extends ValueObject
         string $name = null,
         string $url = null,
         string $email = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->name = $name;
         $this->url = $url;

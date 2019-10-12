@@ -46,7 +46,7 @@ final class Path extends ValueObject
         Operation $traceOperation = null,
         ServerCollection $servers = null,
         ParameterCollection $parameters = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->summary = $summary;
         $this->ref = $ref;

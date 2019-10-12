@@ -15,7 +15,7 @@ final class ParameterTest extends TestCase
             'id',
             'path',
             null,
-            $this->createMediaTypeMap([
+            $this->createMediaTypes([
                 'json' => $this->createMediaType($this->createReference('#/components/parameters/Id')),
             ])
         );
@@ -49,11 +49,11 @@ final class ParameterTest extends TestCase
             'simple',
             true,
             true,
-            $this->createExampleMap([
+            $this->createExamples([
                 'one' => $this->createReference('#/components/schemas/ExampleOne'),
                 'two' => $this->createReference('#/components/schemas/ExampleTwo'),
             ]),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'name' => 'id',

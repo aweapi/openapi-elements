@@ -19,7 +19,7 @@ final class OAuthFlowTest extends TestCase
             'https://example.com/api/oauth/dialog',
             'https://example.com/api/oauth/token',
             'https://example.com/api/oauth/refresh',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'scopes' => [

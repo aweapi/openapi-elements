@@ -22,7 +22,7 @@ abstract class SecurityScheme extends ValueObject implements SecuritySchemeAggre
     public function __construct(
         string $type,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->type = $type;
         $this->description = $description;

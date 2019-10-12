@@ -15,7 +15,7 @@ final class TagTest extends TestCase
             'Pets',
             'Description',
             $this->createExternalDocumentation('https://example.com/docs'),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'name' => 'Pets',

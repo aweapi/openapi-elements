@@ -17,7 +17,7 @@ final class ServerVariable extends ValueObject
         bool $default,
         array $enum = null,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->default = $default;
         $this->enum = $enum;

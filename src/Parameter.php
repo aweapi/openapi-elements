@@ -32,7 +32,7 @@ class Parameter extends ValueObject implements ParameterAggregate
         string $name,
         string $in,
         SchemaAggregate $schema = null,
-        MediaTypeMap $content = null,
+        MediaTypes $content = null,
         string $description = null,
         bool $required = null,
         bool $deprecated = false,
@@ -40,8 +40,8 @@ class Parameter extends ValueObject implements ParameterAggregate
         string $style = null,
         bool $explode = null,
         bool $allowReserved = false,
-        ExampleMap $examples = null,
-        ExtensionMap $extensions = null
+        Examples $examples = null,
+        Extensions $extensions = null
     ) {
         $this->name = $name;
         $this->in = $in;

@@ -16,7 +16,7 @@ final class Tag extends ValueObject
         string $name,
         string $description = null,
         ExternalDocumentation $externalDocs = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->name = $name;
         $this->description = $description;

@@ -14,10 +14,10 @@ final class RequestBodyTest extends TestCase
     public function isCreatedWithOptionalProperties(): void
     {
         $object = $this->createRequestBody(
-            $this->createMediaTypeMap([]),
+            $this->createMediaTypes([]),
             'Description',
             true,
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'content' => new stdClass(),
@@ -33,7 +33,7 @@ final class RequestBodyTest extends TestCase
     public function isCreatedWithoutOptionalProperties(): void
     {
         $object = $this->createRequestBody(
-            $this->createMediaTypeMap([])
+            $this->createMediaTypes([])
         );
         self::assertJsonObject([
             'content' => new stdClass(),

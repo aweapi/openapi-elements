@@ -13,12 +13,12 @@ final class ResponseTest extends TestCase
     {
         $object = $this->createResponse(
             'Description',
-            $this->createHeaderMap([
+            $this->createHeaders([
                 'Content-Type' => $this->createHeader($this->createSchema(['type' => 'string'])),
             ]),
-            $this->createMediaTypeMap([]),
-            $this->createLinkMap([]),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createMediaTypes([]),
+            $this->createLinks([]),
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'description' => 'Description',

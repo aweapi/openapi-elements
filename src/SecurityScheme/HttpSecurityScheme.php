@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Waspes\Objects\SecurityScheme;
 
-use Waspes\Objects\ExtensionMap;
+use Waspes\Objects\Extensions;
 use Waspes\Objects\SecurityScheme;
 
 final class HttpSecurityScheme extends SecurityScheme
@@ -17,7 +17,7 @@ final class HttpSecurityScheme extends SecurityScheme
         string $scheme,
         string $bearerFormat = null,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         parent::__construct(
             SecurityScheme::TYPE_HTTP,

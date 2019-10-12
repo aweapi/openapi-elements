@@ -8,7 +8,7 @@ final class Header extends Parameter implements HeaderAggregate
 {
     public function __construct(
         SchemaAggregate $schema = null,
-        MediaTypeMap $content = null,
+        MediaTypes $content = null,
         string $description = null,
         bool $required = null,
         bool $deprecated = false,
@@ -16,8 +16,8 @@ final class Header extends Parameter implements HeaderAggregate
         string $style = null,
         bool $explode = null,
         bool $allowReserved = false,
-        ExampleMap $examples = null,
-        ExtensionMap $extensions = null
+        Examples $examples = null,
+        Extensions $extensions = null
     ) {
         parent::__construct(
             // The name MUST not be used.

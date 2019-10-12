@@ -20,8 +20,8 @@ final class OpenApiTest extends TestCase
         ];
         $server = $this->createServer('https://example.com');
         $schema = $this->createSchema(['type' => 'string']);
-        $schemas = $this->createSchemaMap(['DemoSchema' => $schema]);
-        $components = $this->createComponentMap($schemas);
+        $schemas = $this->createSchemas(['DemoSchema' => $schema]);
+        $components = $this->createComponents($schemas);
         $security = $this->createSecurityRequirementCollection([
             $this->createSecurityRequirement([
                 'petstore_auth' => ['write:pets', 'read:pets'],
@@ -35,13 +35,13 @@ final class OpenApiTest extends TestCase
                 'Pets API',
                 '1.0'
             ),
-            $this->createPathMap($paths),
+            $this->createPaths($paths),
             $this->createServerCollection([$server]),
             $components,
             $security,
             $tags,
             $externalDocs,
-            $this->createExtensionMap(['x-foo' => 'bar'])
+            $this->createExtensions(['x-foo' => 'bar'])
         );
         self::assertJsonObject([
             'openapi' => OpenApi::LATEST_VERSION,
@@ -90,7 +90,7 @@ final class OpenApiTest extends TestCase
                 'Pets API',
                 '1.0'
             ),
-            $this->createPathMap([])
+            $this->createPaths([])
         );
         self::assertJsonObject([
             'openapi' => OpenApi::LATEST_VERSION,

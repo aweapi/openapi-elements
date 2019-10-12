@@ -16,7 +16,7 @@ final class OAuthFlowsTest extends TestCase
             $this->createOAuthFlow(['read' => 'password']),
             $this->createOAuthFlow(['read' => 'clientCredentials']),
             $this->createOAuthFlow(['read' => 'authorizationCode']),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'implicit' => ['scopes' => ['read' => 'implicit']],

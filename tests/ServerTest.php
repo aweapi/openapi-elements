@@ -14,8 +14,8 @@ final class ServerTest extends TestCase
         $object = $this->createServer(
             'https://example.com',
             'Description',
-            $this->createServerVariableMap(['id' => $this->createServerVariable(true)]),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createServerVariables(['id' => $this->createServerVariable(true)]),
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'url' => 'https://example.com',

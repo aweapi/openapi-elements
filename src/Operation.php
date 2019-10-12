@@ -25,7 +25,7 @@ final class Operation extends ValueObject
     private $tags;
 
     public function __construct(
-        OperationResponseMap $responses,
+        OperationResponses $responses,
         RequestBody $requestBody = null,
         array $tags = [],
         string $operationId = null,
@@ -34,10 +34,10 @@ final class Operation extends ValueObject
         bool $deprecated = false,
         ParameterCollection $parameters = null,
         SecurityRequirementCollection $security = null,
-        CallbackRequestMap $callbacks = null,
+        CallbackRequests $callbacks = null,
         ServerCollection $servers = null,
         ExternalDocumentation $externalDocs = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->responses = $responses;
         $this->requestBody = $requestBody;
@@ -64,7 +64,7 @@ final class Operation extends ValueObject
         return $this->requestBody;
     }
 
-    public function getResponses(): OperationResponseMap
+    public function getResponses(): OperationResponses
     {
         return $this->responses;
     }

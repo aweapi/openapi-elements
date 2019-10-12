@@ -13,14 +13,14 @@ final class MediaTypeTest extends TestCase
     {
         $object = $this->createMediaType(
             $this->createSchema(['type' => 'string']),
-            $this->createExampleMap([
+            $this->createExamples([
                 'one' => $this->createReference('#/components/schemas/ExampleOne'),
                 'two' => $this->createReference('#/components/schemas/ExampleTwo'),
             ]),
-            $this->createEncodingMap([
+            $this->createEncodings([
                 'variable' => $this->createEncoding('application/json'),
             ]),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'schema' => ['type' => 'string'],
