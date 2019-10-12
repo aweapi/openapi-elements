@@ -18,7 +18,7 @@ final class InfoTest extends TestCase
             'https://example.com/terms-of-service',
             $this->createContact('API Support'),
             $this->createLicense('MIT'),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'title' => 'API',

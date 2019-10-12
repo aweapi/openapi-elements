@@ -26,13 +26,13 @@ final class OpenApi extends ValueObject
     public function __construct(
         string $openapi,
         Info $info,
-        PathMap $paths,
+        Paths $paths,
         ServerCollection $servers = null,
-        ComponentMap $components = null,
+        Components $components = null,
         SecurityRequirementCollection $security = null,
         TagCollection $tags = null,
         ExternalDocumentation $externalDocs = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         if (!$servers || !$servers->hasItems()) {
             // If the servers property is not provided, or is an empty array,
@@ -51,7 +51,7 @@ final class OpenApi extends ValueObject
         $this->extensions = $extensions;
     }
 
-    public function getComponents(): ComponentMap
+    public function getComponents(): Components
     {
         return $this->components;
     }
@@ -66,7 +66,7 @@ final class OpenApi extends ValueObject
         return $this->openapi;
     }
 
-    public function getPaths(): PathMap
+    public function getPaths(): Paths
     {
         return $this->paths;
     }

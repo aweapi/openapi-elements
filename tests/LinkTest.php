@@ -41,7 +41,7 @@ final class LinkTest extends TestCase
             ['parameter'],
             'request body',
             $this->createServer('https://example.com'),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'operationId' => 'readPet',

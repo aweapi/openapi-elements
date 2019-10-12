@@ -12,7 +12,7 @@ final class CallbackRequest extends Map
 
     public function __construct(
         iterable $items,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         foreach ($items as $expression => $path) {
             $this->setItem($expression, $path);

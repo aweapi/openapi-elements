@@ -21,11 +21,11 @@ final class HeaderTest extends TestCase
             'simple',
             true,
             true,
-            $this->createExampleMap([
+            $this->createExamples([
                 'one' => $this->createReference('#/components/schemas/ExampleOne'),
                 'two' => $this->createReference('#/components/schemas/ExampleTwo'),
             ]),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'schema' => ['type' => 'string'],

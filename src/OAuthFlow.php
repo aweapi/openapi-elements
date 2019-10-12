@@ -21,7 +21,7 @@ final class OAuthFlow extends ValueObject
         string $authorizationUrl = null,
         string $tokenUrl = null,
         string $refreshUrl = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         foreach ($scopes as $name => $shortDescription) {
             $name = $this->filterString($name);

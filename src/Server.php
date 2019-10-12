@@ -16,8 +16,8 @@ final class Server extends ValueObject
     public function __construct(
         string $url,
         string $description = null,
-        ServerVariableMap $variables = null,
-        ExtensionMap $extensions = null
+        ServerVariables $variables = null,
+        Extensions $extensions = null
     ) {
         $this->url = $url;
         $this->description = $description;
@@ -30,7 +30,7 @@ final class Server extends ValueObject
         return $this->url;
     }
 
-    public function getVariables(): ServerVariableMap
+    public function getVariables(): ServerVariables
     {
         return $this->variables;
     }

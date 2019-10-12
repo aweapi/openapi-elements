@@ -11,11 +11,11 @@ final class OperationTest extends TestCase
      */
     public function isCreatedWithOptionalProperties(): void
     {
-        $responses = $this->createOperationResponseMap([
+        $responses = $this->createOperationResponses([
             '200' => $this->createResponse('OK'),
         ]);
         $requestBody = $this->createRequestBody(
-            $this->createMediaTypeMap([
+            $this->createMediaTypes([
                 'application/json' => $this->createMediaType(
                     $this->createReference('#/components/requestBodies/ExampleRequestBody')
                 ),
@@ -50,10 +50,10 @@ final class OperationTest extends TestCase
                     'petstore_auth' => ['write:pets', 'read:pets'],
                 ]),
             ]),
-            $this->createCallbackRequestMap(['FooCallback' => $callback]),
+            $this->createCallbackRequests(['FooCallback' => $callback]),
             $this->createServerCollection([$this->createServer($serverUrl)]),
             $externalDocs,
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'responses' => [
@@ -110,7 +110,7 @@ final class OperationTest extends TestCase
      */
     public function isCreatedWithoutOptionalProperties(): void
     {
-        $responses = $this->createOperationResponseMap([
+        $responses = $this->createOperationResponses([
             '200' => $this->createResponse('OK'),
         ]);
         $object = $this->createOperation(

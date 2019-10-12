@@ -5,54 +5,54 @@ declare(strict_types=1);
 namespace Waspes\Tests\Objects;
 
 use Waspes\Objects\CallbackRequest;
-use Waspes\Objects\CallbackRequestMap;
-use Waspes\Objects\ComponentMap;
+use Waspes\Objects\CallbackRequests;
+use Waspes\Objects\Components;
 use Waspes\Objects\Contact;
 use Waspes\Objects\Definition;
 use Waspes\Objects\Discriminator;
 use Waspes\Objects\Encoding;
-use Waspes\Objects\EncodingMap;
+use Waspes\Objects\Encodings;
 use Waspes\Objects\Example;
-use Waspes\Objects\ExampleMap;
-use Waspes\Objects\ExtensionMap;
+use Waspes\Objects\Examples;
+use Waspes\Objects\Extensions;
 use Waspes\Objects\ExternalDocumentation;
 use Waspes\Objects\Header;
-use Waspes\Objects\HeaderMap;
+use Waspes\Objects\Headers;
 use Waspes\Objects\Info;
 use Waspes\Objects\License;
 use Waspes\Objects\Link;
-use Waspes\Objects\LinkMap;
+use Waspes\Objects\Links;
 use Waspes\Objects\MediaType;
-use Waspes\Objects\MediaTypeMap;
+use Waspes\Objects\MediaTypes;
 use Waspes\Objects\OAuthFlow;
 use Waspes\Objects\OAuthFlows;
 use Waspes\Objects\OpenApi;
 use Waspes\Objects\Operation;
-use Waspes\Objects\OperationResponseMap;
+use Waspes\Objects\OperationResponses;
 use Waspes\Objects\Parameter;
 use Waspes\Objects\ParameterCollection;
-use Waspes\Objects\ParameterMap;
+use Waspes\Objects\Parameters;
 use Waspes\Objects\Path;
-use Waspes\Objects\PathMap;
+use Waspes\Objects\Paths;
 use Waspes\Objects\Reference;
+use Waspes\Objects\RequestBodies;
 use Waspes\Objects\RequestBody;
-use Waspes\Objects\RequestBodyMap;
 use Waspes\Objects\Response;
-use Waspes\Objects\ResponseMap;
+use Waspes\Objects\Responses;
 use Waspes\Objects\Schema;
 use Waspes\Objects\SchemaAggregate;
-use Waspes\Objects\SchemaMap;
+use Waspes\Objects\Schemas;
 use Waspes\Objects\SecurityRequirement;
 use Waspes\Objects\SecurityRequirementCollection;
 use Waspes\Objects\SecurityScheme\ApiKeySecurityScheme;
 use Waspes\Objects\SecurityScheme\HttpSecurityScheme;
 use Waspes\Objects\SecurityScheme\OAuth2SecurityScheme;
 use Waspes\Objects\SecurityScheme\OpenIdConnectSecurityScheme;
-use Waspes\Objects\SecuritySchemeMap;
+use Waspes\Objects\SecuritySchemes;
 use Waspes\Objects\Server;
 use Waspes\Objects\ServerCollection;
 use Waspes\Objects\ServerVariable;
-use Waspes\Objects\ServerVariableMap;
+use Waspes\Objects\ServerVariables;
 use Waspes\Objects\Tag;
 use Waspes\Objects\TagCollection;
 
@@ -79,7 +79,7 @@ trait TestFactory
         string $name,
         string $in,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): ApiKeySecurityScheme {
         return new ApiKeySecurityScheme(
             $name,
@@ -91,7 +91,7 @@ trait TestFactory
 
     final protected function createCallbackRequest(
         iterable $items,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): CallbackRequest {
         return new CallbackRequest(
             $items,
@@ -99,24 +99,24 @@ trait TestFactory
         );
     }
 
-    final protected function createCallbackRequestMap(iterable $items): CallbackRequestMap
+    final protected function createCallbackRequests(iterable $items): CallbackRequests
     {
-        return new CallbackRequestMap($items);
+        return new CallbackRequests($items);
     }
 
-    final protected function createComponentMap(
-        SchemaMap $schemas = null,
-        ResponseMap $responses = null,
-        ParameterMap $parameters = null,
-        RequestBodyMap $requestBodies = null,
-        HeaderMap $headers = null,
-        SecuritySchemeMap $securitySchemes = null,
-        LinkMap $links = null,
-        CallbackRequestMap $callbacks = null,
-        ExampleMap $examples = null,
-        ExtensionMap $extensions = null
-    ): ComponentMap {
-        return new ComponentMap(
+    final protected function createComponents(
+        Schemas $schemas = null,
+        Responses $responses = null,
+        Parameters $parameters = null,
+        RequestBodies $requestBodies = null,
+        Headers $headers = null,
+        SecuritySchemes $securitySchemes = null,
+        Links $links = null,
+        CallbackRequests $callbacks = null,
+        Examples $examples = null,
+        Extensions $extensions = null
+    ): Components {
+        return new Components(
             $schemas,
             $responses,
             $parameters,
@@ -134,7 +134,7 @@ trait TestFactory
         string $name = null,
         string $url = null,
         string $email = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Contact {
         return new Contact(
             $name,
@@ -156,11 +156,11 @@ trait TestFactory
 
     final protected function createEncoding(
         string $contentType = null,
-        HeaderMap $headers = null,
+        Headers $headers = null,
         string $style = null,
         bool $explode = true,
         bool $allowReserved = false,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Encoding {
         return new Encoding(
             $contentType,
@@ -172,9 +172,9 @@ trait TestFactory
         );
     }
 
-    final protected function createEncodingMap(iterable $encodings): EncodingMap
+    final protected function createEncodings(iterable $encodings): Encodings
     {
-        return new EncodingMap($encodings);
+        return new Encodings($encodings);
     }
 
     /**
@@ -185,7 +185,7 @@ trait TestFactory
         string $description = null,
         $value = null,
         string $externalValue = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Example {
         return new Example(
             $summary,
@@ -196,20 +196,20 @@ trait TestFactory
         );
     }
 
-    final protected function createExampleMap(iterable $items): ExampleMap
+    final protected function createExamples(iterable $items): Examples
     {
-        return new ExampleMap($items);
+        return new Examples($items);
     }
 
-    final protected function createExtensionMap(iterable $items): ExtensionMap
+    final protected function createExtensions(iterable $items): Extensions
     {
-        return new ExtensionMap($items);
+        return new Extensions($items);
     }
 
     final protected function createExternalDocumentation(
         string $url,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): ExternalDocumentation {
         return new ExternalDocumentation(
             $url,
@@ -220,7 +220,7 @@ trait TestFactory
 
     final protected function createHeader(
         SchemaAggregate $schema = null,
-        MediaTypeMap $content = null,
+        MediaTypes $content = null,
         string $description = null,
         bool $required = null,
         bool $deprecated = false,
@@ -228,8 +228,8 @@ trait TestFactory
         string $style = null,
         bool $explode = null,
         bool $allowReserved = false,
-        ExampleMap $examples = null,
-        ExtensionMap $extensions = null
+        Examples $examples = null,
+        Extensions $extensions = null
     ): Header {
         return new Header(
             $schema,
@@ -246,16 +246,16 @@ trait TestFactory
         );
     }
 
-    final protected function createHeaderMap(iterable $headers): HeaderMap
+    final protected function createHeaders(iterable $headers): Headers
     {
-        return new HeaderMap($headers);
+        return new Headers($headers);
     }
 
     final protected function createHttpSecurityScheme(
         string $scheme,
         string $bearerFormat = null,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): HttpSecurityScheme {
         return new HttpSecurityScheme(
             $scheme,
@@ -272,7 +272,7 @@ trait TestFactory
         string $termsOfService = null,
         Contact $contact = null,
         License $license = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Info {
         return new Info(
             $title,
@@ -288,7 +288,7 @@ trait TestFactory
     final protected function createLicense(
         string $name,
         string $url = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): License {
         return new License($name, $url, $extensions);
     }
@@ -303,7 +303,7 @@ trait TestFactory
         array $parameters = [],
         $requestBody = null,
         Server $server = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Link {
         return new Link(
             $operationId,
@@ -316,16 +316,16 @@ trait TestFactory
         );
     }
 
-    final protected function createLinkMap(iterable $items): LinkMap
+    final protected function createLinks(iterable $items): Links
     {
-        return new LinkMap($items);
+        return new Links($items);
     }
 
     final protected function createMediaType(
         SchemaAggregate $schema = null,
-        ExampleMap $examples = null,
-        EncodingMap $encodings = null,
-        ExtensionMap $extensions = null
+        Examples $examples = null,
+        Encodings $encodings = null,
+        Extensions $extensions = null
     ): MediaType {
         return new MediaType(
             $schema,
@@ -335,15 +335,15 @@ trait TestFactory
         );
     }
 
-    final protected function createMediaTypeMap(iterable $items): MediaTypeMap
+    final protected function createMediaTypes(iterable $items): MediaTypes
     {
-        return new MediaTypeMap($items);
+        return new MediaTypes($items);
     }
 
     final protected function createOAuth2SecurityScheme(
         OAuthFlows $flows,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): OAuth2SecurityScheme {
         return new OAuth2SecurityScheme(
             $flows,
@@ -357,7 +357,7 @@ trait TestFactory
         string $authorizationUrl = null,
         string $tokenUrl = null,
         string $refreshUrl = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): OAuthFlow {
         return new OAuthFlow(
             $scopes,
@@ -373,7 +373,7 @@ trait TestFactory
         OAuthFlow $password = null,
         OAuthFlow $clientCredentials = null,
         OAuthFlow $authorizationCode = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): OAuthFlows {
         return new OAuthFlows(
             $implicit,
@@ -387,13 +387,13 @@ trait TestFactory
     final protected function createOpenApi(
         string $openapi,
         Info $info,
-        PathMap $paths,
+        Paths $paths,
         ServerCollection $servers = null,
-        ComponentMap $components = null,
+        Components $components = null,
         SecurityRequirementCollection $security = null,
         TagCollection $tags = null,
         ExternalDocumentation $externalDocs = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): OpenApi {
         return new OpenApi(
             $openapi,
@@ -411,7 +411,7 @@ trait TestFactory
     final protected function createOpenIdConnectSecurityScheme(
         string $openIdConnectUrl,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): OpenIdConnectSecurityScheme {
         return new OpenIdConnectSecurityScheme(
             $openIdConnectUrl,
@@ -421,7 +421,7 @@ trait TestFactory
     }
 
     final protected function createOperation(
-        OperationResponseMap $responses,
+        OperationResponses $responses,
         RequestBody $requestBody = null,
         array $tags = [],
         string $operationId = null,
@@ -430,10 +430,10 @@ trait TestFactory
         bool $deprecated = false,
         ParameterCollection $parameters = null,
         SecurityRequirementCollection $security = null,
-        CallbackRequestMap $callbacks = null,
+        CallbackRequests $callbacks = null,
         ServerCollection $servers = null,
         ExternalDocumentation $externalDocs = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Operation {
         return new Operation(
             $responses,
@@ -452,12 +452,12 @@ trait TestFactory
         );
     }
 
-    final protected function createOperationResponseMap(
+    final protected function createOperationResponses(
         iterable $responses,
         Response $default = null,
-        ExtensionMap $extensions = null
-    ): OperationResponseMap {
-        return new OperationResponseMap(
+        Extensions $extensions = null
+    ): OperationResponses {
+        return new OperationResponses(
             $responses,
             $default,
             $extensions
@@ -468,7 +468,7 @@ trait TestFactory
         string $name,
         string $in,
         SchemaAggregate $schema = null,
-        MediaTypeMap $content = null,
+        MediaTypes $content = null,
         string $description = null,
         bool $required = null,
         bool $deprecated = false,
@@ -476,8 +476,8 @@ trait TestFactory
         string $style = null,
         bool $explode = null,
         bool $allowReserved = false,
-        ExampleMap $examples = null,
-        ExtensionMap $extensions = null
+        Examples $examples = null,
+        Extensions $extensions = null
     ): Parameter {
         return new Parameter(
             $name,
@@ -501,9 +501,9 @@ trait TestFactory
         return new ParameterCollection($items);
     }
 
-    final protected function createParameterMap(iterable $parameters): ParameterMap
+    final protected function createParameters(iterable $parameters): Parameters
     {
-        return new ParameterMap($parameters);
+        return new Parameters($parameters);
     }
 
     final protected function createPath(
@@ -520,7 +520,7 @@ trait TestFactory
         Operation $traceOperation = null,
         ServerCollection $servers = null,
         ParameterCollection $parameters = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Path {
         return new Path(
             $summary,
@@ -540,11 +540,11 @@ trait TestFactory
         );
     }
 
-    final protected function createPathMap(
+    final protected function createPaths(
         iterable $paths,
-        ExtensionMap $extensions = null
-    ): PathMap {
-        return new PathMap($paths, $extensions);
+        Extensions $extensions = null
+    ): Paths {
+        return new Paths($paths, $extensions);
     }
 
     final protected function createReference(string $href): Reference
@@ -552,11 +552,16 @@ trait TestFactory
         return new Reference($href);
     }
 
+    final protected function createRequestBodies(iterable $requestBodies): RequestBodies
+    {
+        return new RequestBodies($requestBodies);
+    }
+
     final protected function createRequestBody(
-        MediaTypeMap $content,
+        MediaTypes $content,
         string $description = null,
         bool $required = false,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): RequestBody {
         return new RequestBody(
             $content,
@@ -566,17 +571,12 @@ trait TestFactory
         );
     }
 
-    final protected function createRequestBodyMap(iterable $requestBodies): RequestBodyMap
-    {
-        return new RequestBodyMap($requestBodies);
-    }
-
     final protected function createResponse(
         string $description,
-        HeaderMap $headers = null,
-        MediaTypeMap $content = null,
-        LinkMap $links = null,
-        ExtensionMap $extensions = null
+        Headers $headers = null,
+        MediaTypes $content = null,
+        Links $links = null,
+        Extensions $extensions = null
     ): Response {
         return new Response(
             $description,
@@ -587,21 +587,21 @@ trait TestFactory
         );
     }
 
-    final protected function createResponseMap(iterable $responses): ResponseMap
+    final protected function createResponses(iterable $responses): Responses
     {
-        return new ResponseMap($responses);
+        return new Responses($responses);
     }
 
     final protected function createSchema(
         array $attributes,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Schema {
         return new Schema($attributes, $extensions);
     }
 
-    final protected function createSchemaMap(iterable $schemas): SchemaMap
+    final protected function createSchemas(iterable $schemas): Schemas
     {
-        return new SchemaMap($schemas);
+        return new Schemas($schemas);
     }
 
     final protected function createSecurityRequirement(iterable $requirements): SecurityRequirement
@@ -614,16 +614,16 @@ trait TestFactory
         return new SecurityRequirementCollection($requirements);
     }
 
-    final protected function createSecuritySchemeMap(iterable $securitySchemes): SecuritySchemeMap
+    final protected function createSecuritySchemes(iterable $securitySchemes): SecuritySchemes
     {
-        return new SecuritySchemeMap($securitySchemes);
+        return new SecuritySchemes($securitySchemes);
     }
 
     final protected function createServer(
         string $url,
         string $description = null,
-        ServerVariableMap $variables = null,
-        ExtensionMap $extensions = null
+        ServerVariables $variables = null,
+        Extensions $extensions = null
     ): Server {
         return new Server(
             $url,
@@ -642,7 +642,7 @@ trait TestFactory
         bool $default,
         array $enum = null,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): ServerVariable {
         return new ServerVariable(
             $default,
@@ -652,16 +652,16 @@ trait TestFactory
         );
     }
 
-    final protected function createServerVariableMap(iterable $variables): ServerVariableMap
+    final protected function createServerVariables(iterable $variables): ServerVariables
     {
-        return new ServerVariableMap($variables);
+        return new ServerVariables($variables);
     }
 
     final protected function createTag(
         string $name,
         string $description = null,
         ExternalDocumentation $externalDocs = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ): Tag {
         return new Tag(
             $name,

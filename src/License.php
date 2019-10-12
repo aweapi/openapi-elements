@@ -14,7 +14,7 @@ final class License extends ValueObject
     public function __construct(
         string $name,
         string $url = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->name = $name;
         $this->url = $url;

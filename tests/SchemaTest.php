@@ -14,7 +14,7 @@ final class SchemaTest extends TestCase
         $schema = $this->createSchema([
             'type' => 'string',
             'format' => 'email',
-        ], $this->createExtensionMap([
+        ], $this->createExtensions([
             'x-foo' => 'bar',
         ]));
         self::assertJsonObject([

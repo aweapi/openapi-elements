@@ -16,10 +16,10 @@ final class Response extends ValueObject implements ResponseAggregate
 
     public function __construct(
         string $description,
-        HeaderMap $headers = null,
-        MediaTypeMap $content = null,
-        LinkMap $links = null,
-        ExtensionMap $extensions = null
+        Headers $headers = null,
+        MediaTypes $content = null,
+        Links $links = null,
+        Extensions $extensions = null
     ) {
         $this->description = $description;
         $this->headers = $headers;
@@ -28,12 +28,12 @@ final class Response extends ValueObject implements ResponseAggregate
         $this->extensions = $extensions;
     }
 
-    public function getHeaders(): HeaderMap
+    public function getHeaders(): Headers
     {
         return $this->headers;
     }
 
-    public function getLinks(): LinkMap
+    public function getLinks(): Links
     {
         return $this->links;
     }

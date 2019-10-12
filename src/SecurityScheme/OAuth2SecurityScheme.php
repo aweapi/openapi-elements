@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Waspes\Objects\SecurityScheme;
 
-use Waspes\Objects\ExtensionMap;
+use Waspes\Objects\Extensions;
 use Waspes\Objects\OAuthFlows;
 use Waspes\Objects\SecurityScheme;
 
@@ -15,7 +15,7 @@ final class OAuth2SecurityScheme extends SecurityScheme
     public function __construct(
         OAuthFlows $flows,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         parent::__construct(
             SecurityScheme::TYPE_OAUTH2,

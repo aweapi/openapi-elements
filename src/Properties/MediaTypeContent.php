@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Waspes\Objects\Properties;
 
-use Waspes\Objects\MediaTypeMap;
+use Waspes\Objects\MediaTypes;
 
 trait MediaTypeContent
 {
     private $content;
 
-    public function getContent(): MediaTypeMap
+    public function getContent(): MediaTypes
     {
         return $this->content;
     }

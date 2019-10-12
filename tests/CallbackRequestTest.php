@@ -18,7 +18,7 @@ final class CallbackRequestTest extends TestCase
                     $this->createReference('#/components/schemas/webhook-path-schema')
                 ),
             ],
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'https://example.com/?email={$request.body#/email}' => [

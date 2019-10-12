@@ -12,7 +12,7 @@ final class Schema extends ValueObject implements SchemaAggregate
 
     public function __construct(
         array $attributes,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->attributes = $attributes;
         $this->extensions = $extensions;

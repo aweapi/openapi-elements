@@ -15,7 +15,7 @@ final class ContactTest extends TestCase
             'API Support',
             'https://www.example.com/support',
             'support@example.com',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'name' => 'API Support',

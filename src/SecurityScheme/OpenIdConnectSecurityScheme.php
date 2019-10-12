@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Waspes\Objects\SecurityScheme;
 
-use Waspes\Objects\ExtensionMap;
+use Waspes\Objects\Extensions;
 use Waspes\Objects\SecurityScheme;
 
 final class OpenIdConnectSecurityScheme extends SecurityScheme
@@ -14,7 +14,7 @@ final class OpenIdConnectSecurityScheme extends SecurityScheme
     public function __construct(
         string $openIdConnectUrl,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         parent::__construct(
             SecurityScheme::TYPE_OPEN_ID_CONNECT,

@@ -13,10 +13,10 @@ final class RequestBody extends ValueObject implements RequestBodyAggregate
     private $required;
 
     public function __construct(
-        MediaTypeMap $content,
+        MediaTypes $content,
         string $description = null,
         bool $required = false,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->content = $content;
         $this->description = $description;

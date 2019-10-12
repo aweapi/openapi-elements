@@ -18,7 +18,7 @@ final class ApiKeySecuritySchemeTest extends TestCase
             'api_key',
             'header',
             'Description',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'type' => ApiKeySecurityScheme::TYPE_API_KEY,

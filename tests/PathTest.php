@@ -15,10 +15,10 @@ final class PathTest extends TestCase
         $description = 'Description';
         $href = '#/components/schemas/PetEndpoint';
         $getOperation = $this->createOperation(
-            $this->createOperationResponseMap([], $this->createResponse('Get pet'))
+            $this->createOperationResponses([], $this->createResponse('Get pet'))
         );
         $optionsOperation = $this->createOperation(
-            $this->createOperationResponseMap([], $this->createResponse('Endpoint options'))
+            $this->createOperationResponses([], $this->createResponse('Endpoint options'))
         );
         $serverUrl = 'https://example.com';
         $object = $this->createPath(
@@ -35,7 +35,7 @@ final class PathTest extends TestCase
             null,
             $this->createServerCollection([$this->createServer($serverUrl)]),
             $this->createParameterCollection([$this->createParameter('id', 'path')]),
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertTrue($object->hasOperation('GET'));
         self::assertSame($getOperation, $object->getOperation('GET'));

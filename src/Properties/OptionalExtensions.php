@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Waspes\Objects\Properties;
 
-use Waspes\Objects\ExtensionMap;
+use Waspes\Objects\Extensions;
 
 trait OptionalExtensions
 {
@@ -17,7 +17,7 @@ trait OptionalExtensions
             : $properties;
     }
 
-    private function getExtensions(): ExtensionMap
+    private function getExtensions(): Extensions
     {
         return $this->extensions;
     }

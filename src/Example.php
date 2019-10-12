@@ -22,7 +22,7 @@ final class Example extends ValueObject implements ExampleAggregate
         string $description = null,
         $value = null,
         string $externalValue = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->summary = $summary;
         $this->description = $description;

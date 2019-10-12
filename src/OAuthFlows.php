@@ -21,7 +21,7 @@ final class OAuthFlows extends ValueObject
         OAuthFlow $password = null,
         OAuthFlow $clientCredentials = null,
         OAuthFlow $authorizationCode = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->implicit = $implicit;
         $this->password = $password;

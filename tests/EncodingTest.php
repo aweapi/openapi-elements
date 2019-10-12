@@ -13,13 +13,13 @@ final class EncodingTest extends TestCase
     {
         $object = $this->createEncoding(
             'application/json',
-            $this->createHeaderMap([
+            $this->createHeaders([
                 'Rate-Limiting' => $this->createHeader($this->createSchema(['type' => 'integer'])),
             ]),
             'form',
             false,
             true,
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'contentType' => 'application/json',

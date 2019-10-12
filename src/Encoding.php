@@ -20,11 +20,11 @@ final class Encoding extends ValueObject
 
     public function __construct(
         string $contentType = null,
-        HeaderMap $headers = null,
+        Headers $headers = null,
         string $style = null,
         bool $explode = true,
         bool $allowReserved = false,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->contentType = $contentType;
         $this->headers = $headers;
@@ -39,7 +39,7 @@ final class Encoding extends ValueObject
         return $this->contentType;
     }
 
-    public function getHeaders(): HeaderMap
+    public function getHeaders(): Headers
     {
         return $this->headers;
     }

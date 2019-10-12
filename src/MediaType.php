@@ -15,9 +15,9 @@ final class MediaType extends ValueObject
 
     public function __construct(
         SchemaAggregate $schema = null,
-        ExampleMap $examples = null,
-        EncodingMap $encodings = null,
-        ExtensionMap $extensions = null
+        Examples $examples = null,
+        Encodings $encodings = null,
+        Extensions $extensions = null
     ) {
         $this->schema = $schema;
         $this->examples = $examples;
@@ -25,7 +25,7 @@ final class MediaType extends ValueObject
         $this->extensions = $extensions;
     }
 
-    public function getEncodings(): EncodingMap
+    public function getEncodings(): Encodings
     {
         return $this->encodings;
     }

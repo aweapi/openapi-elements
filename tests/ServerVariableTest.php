@@ -15,7 +15,7 @@ final class ServerVariableTest extends TestCase
             true,
             ['foo'],
             'Description',
-            $this->createExtensionMap(['x-foo' => null])
+            $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
             'default' => true,

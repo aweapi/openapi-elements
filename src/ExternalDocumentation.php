@@ -13,7 +13,7 @@ final class ExternalDocumentation extends ValueObject
     public function __construct(
         string $url,
         string $description = null,
-        ExtensionMap $extensions = null
+        Extensions $extensions = null
     ) {
         $this->url = $url;
         $this->description = $description;
