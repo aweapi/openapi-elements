@@ -1,0 +1,36 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        php: ["7.2", "7.3"]
+
+    env:
+      EXECUTE_COVERAGE: ${{ matrix.php == '7.3' }}
+      MEASURE_COVERAGE: ${{ matrix.php == '7.3' }}
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Run PhpUnit with coverage
+        run: if [[ "$EXECUTE_COVERAGE" == "true" ]]; then make report-coverage ; fi
+
+      - name: Run PhpUnit
+        run: if [[ "$EXECUTE_COVERAGE" != "true" ]]; then make test ; fi
+
+      - name: Lint code
+        run: make lint
+
+      - name: Upload coverage report
+        run: if [[ "$MEASURE_COVERAGE" == "true" ]]; then make upload-coverage ; fi
