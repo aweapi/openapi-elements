@@ -29,6 +29,11 @@ final class ResponseBuilder implements Objects\ResponseFactory
         );
     }
 
+    public function createResponseAggregate(): Objects\ResponseAggregate
+    {
+        return $this->createResponse();
+    }
+
     public function setContent(Objects\MediaTypesFactory $content): self
     {
         $this->content = $content;

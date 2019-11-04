@@ -11,6 +11,21 @@ final class ResponseBuilderTest extends TestCase
     /**
      * @test
      */
+    public function isCreatedAsSchemaAggregate(): void
+    {
+        $factory = $this->getBuilderFactory();
+        $schema = $factory->response()
+            ->setDescription('Description')
+            ->createResponseAggregate()
+        ;
+        self::assertJsonObject([
+            'description' => 'Description',
+        ], $schema);
+    }
+
+    /**
+     * @test
+     */
     public function isCreatedWithOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();
