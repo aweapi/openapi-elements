@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Aweapi\Openapi\Builders;
 
 use Aweapi\Openapi\Objects;
+use Aweapi\Openapi\Objects\HeaderAggregate;
 
 final class HeaderBuilder implements Objects\HeaderFactory
 {
@@ -45,6 +46,11 @@ final class HeaderBuilder implements Objects\HeaderFactory
             $this->getExamples() ? $this->getExamples()->createExamples() : null,
             $this->getExtensions()
         );
+    }
+
+    public function createHeaderAggregate(): HeaderAggregate
+    {
+        return $this->createHeader();
     }
 
     public function setAllowEmptyValue(bool $allowEmptyValue): self

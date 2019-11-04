@@ -11,6 +11,21 @@ final class HeaderBuilderTest extends TestCase
     /**
      * @test
      */
+    public function isCreatedAsSchemaAggregate(): void
+    {
+        $factory = $this->getBuilderFactory();
+        $schema = $factory->header()
+            ->setDescription('Description')
+            ->createHeaderAggregate()
+        ;
+        self::assertJsonObject([
+            'description' => 'Description',
+        ], $schema);
+    }
+
+    /**
+     * @test
+     */
     public function isCreatedWithOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();

@@ -15,6 +15,11 @@ final class ReferenceBuilder implements Objects\ReferenceFactory
         return $this->createReference();
     }
 
+    public function createHeaderAggregate(): Objects\HeaderAggregate
+    {
+        return $this->createReference();
+    }
+
     public function createReference(): Objects\Reference
     {
         return new Objects\Reference(
