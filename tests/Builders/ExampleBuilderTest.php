@@ -11,6 +11,21 @@ final class ExampleBuilderTest extends TestCase
     /**
      * @test
      */
+    public function isCreatedAsSchemaAggregate(): void
+    {
+        $factory = $this->getBuilderFactory();
+        $schema = $factory->example()
+            ->setSummary('Summary')
+            ->createExampleAggregate()
+        ;
+        self::assertJsonObject([
+            'summary' => 'Summary',
+        ], $schema);
+    }
+
+    /**
+     * @test
+     */
     public function isCreatedWithOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();

@@ -23,15 +23,15 @@ final class ExamplesBuilder implements Objects\ExamplesFactory
     {
         return new Objects\Examples(
             array_map(
-                static function (Objects\ExampleFactory $factory): Objects\Example {
-                    return $factory->createExample();
+                static function (Objects\ExampleAggregateFactory $factory): Objects\ExampleAggregate {
+                    return $factory->createExampleAggregate();
                 },
                 $this->getExamples()
             )
         );
     }
 
-    public function setExample(string $name, Objects\ExampleFactory $example): self
+    public function setExample(string $name, Objects\ExampleAggregateFactory $example): self
     {
         $this->examples[$name] = $example;
 

@@ -10,6 +10,11 @@ final class ReferenceBuilder implements Objects\ReferenceFactory
 {
     private $href;
 
+    public function createExampleAggregate(): Objects\ExampleAggregate
+    {
+        return $this->createReference();
+    }
+
     public function createReference(): Objects\Reference
     {
         return new Objects\Reference(

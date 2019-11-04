@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Aweapi\Openapi\Builders;
 
 use Aweapi\Openapi\Objects;
+use Aweapi\Openapi\Objects\ExampleAggregate;
 
 final class ExampleBuilder implements Objects\ExampleFactory
 {
@@ -27,6 +28,11 @@ final class ExampleBuilder implements Objects\ExampleFactory
             $this->getExternalValue(),
             $this->getExtensions()
         );
+    }
+
+    public function createExampleAggregate(): ExampleAggregate
+    {
+        return $this->createExample();
     }
 
     public function setDescription(string $description): self
