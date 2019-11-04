@@ -20,6 +20,11 @@ final class SchemaBuilder implements Objects\SchemaFactory
         );
     }
 
+    public function createSchemaAggregate(): Objects\SchemaAggregate
+    {
+        return $this->createSchema();
+    }
+
     public function setAttributes(array $attributes): self
     {
         $this->attributes = $attributes;

@@ -17,6 +17,11 @@ final class ReferenceBuilder implements Objects\ReferenceFactory
         );
     }
 
+    public function createSchemaAggregate(): Objects\SchemaAggregate
+    {
+        return $this->createReference();
+    }
+
     public function setHref(string $href): self
     {
         $this->href = $href;

@@ -11,6 +11,24 @@ final class SchemaBuilderTest extends TestCase
     /**
      * @test
      */
+    public function isCreatedAsSchemaAggregate(): void
+    {
+        $factory = $this->getBuilderFactory();
+        $schema = $factory->schema()
+            ->setAttributes([
+                'type' => 'string',
+                'format' => null,
+            ])
+            ->createSchemaAggregate()
+        ;
+        self::assertJsonObject([
+            'type' => 'string',
+        ], $schema);
+    }
+
+    /**
+     * @test
+     */
     public function isCreatedWithOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();
