@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         php: ["7.2", "7.3"]
@@ -19,6 +19,12 @@ jobs:
 
       - name: Validate composer.json and composer.lock
         run: composer validate
+
+      - name: Cache vendor
+        uses: actions/cache@v1
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('**/composer.lock') }}
 
       - name: Install dependencies
         run: make install
