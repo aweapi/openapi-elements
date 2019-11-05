@@ -8,10 +8,6 @@
 [![PHP Version][ico-php-version]][link-github]
 [![Software License][ico-license]][link-license]
 
-## Usage
-
-*TBD*
-
 [ico-version]: https://img.shields.io/github/tag/aweapi/openapi-elements.svg?label=latest
 [ico-php-version]: https://img.shields.io/packagist/php-v/aweapi/openapi-elements.svg
 [ico-license]: https://img.shields.io/badge/License-MIT-blue.svg
@@ -25,3 +21,7 @@
 [link-license]: LICENSE
 [link-scrutinizer]: https://scrutinizer-ci.com/g/aweapi/openapi-elements/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/aweapi/openapi-elements
+
+## Usage
+
+*TBD*
