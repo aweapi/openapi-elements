@@ -15,7 +15,7 @@ final class RequestBodyBuilderTest extends TestCase
     public function isCreatedAsRequestBodyAggregate(): void
     {
         $factory = $this->getBuilderFactory();
-        $object = $factory->requestBodies()
+        $object = $factory->requestBody()
             ->setContent(
                 $factory->mediaTypes()
             )
@@ -32,7 +32,7 @@ final class RequestBodyBuilderTest extends TestCase
     public function isCreatedWithOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();
-        $object = $factory->requestBodies()
+        $object = $factory->requestBody()
             ->setContent(
                 $factory->mediaTypes()
             )
@@ -55,7 +55,7 @@ final class RequestBodyBuilderTest extends TestCase
     public function isCreatedWithoutOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();
-        $object = $factory->requestBodies()
+        $object = $factory->requestBody()
             ->setContent(
                 $factory->mediaTypes()
             )
