@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Aweapi\Openapi\Builders;
 
 use Aweapi\Openapi\Objects;
+use Aweapi\Openapi\Objects\ParameterAggregate;
 
 final class ParameterBuilder implements Objects\ParameterFactory
 {
@@ -51,6 +52,11 @@ final class ParameterBuilder implements Objects\ParameterFactory
             $this->getExamples() ? $this->getExamples()->createExamples() : null,
             $this->getExtensions()
         );
+    }
+
+    public function createParameterAggregate(): ParameterAggregate
+    {
+        return $this->createParameter();
     }
 
     public function setAllowEmptyValue(bool $allowEmptyValue): self

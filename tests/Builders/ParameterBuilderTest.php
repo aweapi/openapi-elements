@@ -11,6 +11,23 @@ final class ParameterBuilderTest extends TestCase
     /**
      * @test
      */
+    public function isCreatedAsParameterAggregate(): void
+    {
+        $factory = $this->getBuilderFactory();
+        $object = $factory->parameter()
+            ->setName('id')
+            ->setIn('path')
+            ->createParameterAggregate()
+        ;
+        self::assertJsonObject([
+            'name' => 'id',
+            'in' => 'path',
+        ], $object);
+    }
+
+    /**
+     * @test
+     */
     public function isCreatedWithOptionalProperties(): void
     {
         $factory = $this->getBuilderFactory();

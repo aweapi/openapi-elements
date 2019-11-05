@@ -20,6 +20,11 @@ final class ReferenceBuilder implements Objects\ReferenceFactory
         return $this->createReference();
     }
 
+    public function createParameterAggregate(): Objects\ParameterAggregate
+    {
+        return $this->createReference();
+    }
+
     public function createReference(): Objects\Reference
     {
         return new Objects\Reference(

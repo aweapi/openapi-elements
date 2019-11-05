@@ -43,6 +43,22 @@ final class ReferenceBuilderTest extends TestCase
     /**
      * @test
      */
+    public function isCreatedAsParameterAggregate(): void
+    {
+        $factory = $this->getBuilderFactory();
+        $href = '#/components/schemas/Foo';
+        $object = $factory->ref()
+            ->setHref($href)
+            ->createParameterAggregate()
+        ;
+        self::assertJsonObject([
+            '$ref' => $href,
+        ], $object);
+    }
+
+    /**
+     * @test
+     */
     public function isCreatedAsResponseAggregate(): void
     {
         $factory = $this->getBuilderFactory();
