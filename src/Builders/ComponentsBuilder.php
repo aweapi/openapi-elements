@@ -26,7 +26,7 @@ final class ComponentsBuilder implements Objects\ComponentsFactory
 
     private $schemas;
 
-    private $securitySchemes;
+    // private $securitySchemes;
 
     public function createComponents(): Objects\Components
     {

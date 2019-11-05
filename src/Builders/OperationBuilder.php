@@ -37,8 +37,8 @@ final class OperationBuilder implements Objects\OperationFactory
     public function createOperation(): Objects\Operation
     {
         return new Objects\Operation(
-            $this->getResponses() ? $this->getResponses()->createOperationResponses() : null,
-            $this->getRequestBody() ? $this->getRequestBody()->createRequestBodyAggregate() : null,
+            $this->getResponses()->createOperationResponses(),
+            $this->getRequestBody() ? $this->getRequestBody()->createRequestBody() : null,
             $this->getTags(),
             $this->getOperationId(),
             $this->getSummary(),
@@ -46,11 +46,18 @@ final class OperationBuilder implements Objects\OperationFactory
             $this->isDeprecated(),
             $this->getParameters() ? $this->getParameters()->createParameterCollection() : null,
             $this->getSecurity() ? $this->getSecurity()->createSecurityRequirementCollection() : null,
-            null,
+            $this->getCallbacks() ? $this->getCallbacks()->createCallbackRequests() : null,
             $this->getServers() ? $this->getServers()->createServerCollection() : null,
             $this->getExternalDocs() ? $this->getExternalDocs()->createExternalDocumentation() : null,
             $this->getExtensions()
         );
+    }
+
+    public function setCallbacks(Objects\CallbackRequestsFactory $callbacks): self
+    {
+        $this->callbacks = $callbacks;
+
+        return $this;
     }
 
     public function setDeprecated(bool $deprecated): self
@@ -130,6 +137,11 @@ final class OperationBuilder implements Objects\OperationFactory
         return $this;
     }
 
+    private function getCallbacks(): ?Objects\CallbackRequestsFactory
+    {
+        return $this->callbacks;
+    }
+
     private function getDescription(): ?string
     {
         return $this->description;
@@ -155,7 +167,7 @@ final class OperationBuilder implements Objects\OperationFactory
         return $this->requestBody;
     }
 
-    private function getResponses(): ?Objects\OperationResponsesFactory
+    private function getResponses(): Objects\OperationResponsesFactory
     {
         return $this->responses;
     }

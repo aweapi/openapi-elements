@@ -56,6 +56,9 @@ final class ExampleBuilder implements Objects\ExampleFactory
         return $this;
     }
 
+    /**
+     * @param mixed $value
+     */
     public function setValue($value): self
     {
         $this->value = $value;
@@ -78,6 +81,9 @@ final class ExampleBuilder implements Objects\ExampleFactory
         return $this->summary;
     }
 
+    /**
+     * @return mixed
+     */
     private function getValue()
     {
         return $this->value;

@@ -39,7 +39,7 @@ final class DiscriminatorBuilder implements Objects\DiscriminatorFactory
         return $this->mapping;
     }
 
-    private function getPropertyName(): ?string
+    private function getPropertyName(): string
     {
         return $this->propertyName;
     }

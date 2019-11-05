@@ -94,7 +94,7 @@ final class HeaderBuilder implements Objects\HeaderFactory
         return $this;
     }
 
-    public function setExplode($explode): self
+    public function setExplode(bool $explode): self
     {
         $this->explode = $explode;
 
@@ -115,7 +115,7 @@ final class HeaderBuilder implements Objects\HeaderFactory
         return $this;
     }
 
-    public function setStyle($style): self
+    public function setStyle(string $style): self
     {
         $this->style = $style;
 

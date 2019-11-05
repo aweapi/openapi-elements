@@ -19,7 +19,7 @@ final class RequestBodyBuilder implements Objects\RequestBodyFactory
     public function createRequestBody(): Objects\RequestBody
     {
         return new Objects\RequestBody(
-            $this->getContent() ? $this->getContent()->createMediaTypes() : null,
+            $this->getContent()->createMediaTypes(),
             $this->getDescription(),
             $this->isRequired(),
             $this->getExtensions()
@@ -52,7 +52,7 @@ final class RequestBodyBuilder implements Objects\RequestBodyFactory
         return $this;
     }
 
-    private function getContent(): ?Objects\MediaTypesFactory
+    private function getContent(): Objects\MediaTypesFactory
     {
         return $this->content;
     }

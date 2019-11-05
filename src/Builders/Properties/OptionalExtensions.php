@@ -26,6 +26,9 @@ trait OptionalExtensions
         return $this;
     }
 
+    /**
+     * @param mixed $value
+     */
     public function setExtension(string $name, $value): self
     {
         $this->extensions[$name] = $value;
