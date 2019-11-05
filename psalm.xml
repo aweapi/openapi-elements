@@ -62,6 +62,10 @@
     <MissingPropertyType errorLevel="suppress"/>
     <UnusedClass errorLevel="suppress"/>
     <UnusedMethod errorLevel="suppress"/>
+
+    <!-- False alerts -->
+
+    <PossiblyNullReference errorLevel="suppress"/>
   </issueHandlers>
   <plugins>
     <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>

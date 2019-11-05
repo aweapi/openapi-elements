@@ -45,6 +45,7 @@ $config = PhpCsFixer\Config::create()
             'method_argument_space' => ['ensure_fully_multiline' => true],
             'method_chaining_indentation' => true,
             'modernize_types_casting' => true,
+            'multiline_whitespace_before_semicolons' => ['strategy' => 'new_line_for_chained_calls'],
             'native_function_casing' => true,
             // 'native_function_invocation' => true,
             'new_with_braces' => true,
@@ -125,6 +126,7 @@ $config = PhpCsFixer\Config::create()
         PhpCsFixer\Finder::create()
             ->exclude(['vendor'])
             ->in([__DIR__ . '/src', __DIR__ . '/tests'])
-    );
+    )
+;
 
 return $config;

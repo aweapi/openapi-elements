@@ -19,7 +19,9 @@ final class ResponseTest extends TestCase
                 'Content-Type' => $this->createHeader($this->createSchema(['type' => 'string'])),
             ]),
             $this->createMediaTypes([]),
-            $this->createLinks([]),
+            $this->createLinks([
+                'self' => $this->createLink('ReadMe'),
+            ]),
             $this->createExtensions(['x-foo' => null])
         );
         self::assertJsonObject([
@@ -27,6 +29,11 @@ final class ResponseTest extends TestCase
             'headers' => [
                 'Content-Type' => [
                     'schema' => ['type' => 'string'],
+                ],
+            ],
+            'links' => [
+                'self' => [
+                    'operationId' => 'ReadMe',
                 ],
             ],
             'x-foo' => null,
