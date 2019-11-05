@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Aweapi\Openapi\Builders;
 
 use Aweapi\Openapi\Objects;
-use Aweapi\Openapi\Objects\HeaderAggregate;
 
 final class HeaderBuilder implements Objects\HeaderFactory
 {
@@ -48,7 +47,7 @@ final class HeaderBuilder implements Objects\HeaderFactory
         );
     }
 
-    public function createHeaderAggregate(): HeaderAggregate
+    public function createHeaderAggregate(): Objects\HeaderAggregate
     {
         return $this->createHeader();
     }
