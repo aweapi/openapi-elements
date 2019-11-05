@@ -32,6 +32,11 @@ final class ReferenceBuilder implements Objects\ReferenceFactory
         );
     }
 
+    public function createRequestBodyAggregate(): Objects\RequestBodyAggregate
+    {
+        return $this->createReference();
+    }
+
     public function createResponseAggregate(): Objects\ResponseAggregate
     {
         return $this->createReference();

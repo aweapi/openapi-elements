@@ -9,7 +9,8 @@ interface ReferenceFactory extends
     ExampleAggregateFactory,
     HeaderAggregateFactory,
     ResponseAggregateFactory,
-    ParameterAggregateFactory
+    ParameterAggregateFactory,
+    RequestBodyAggregateFactory
 {
     public function createReference(): Reference;
 }
