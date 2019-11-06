@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aweapi\Tests\Openapi\SecurityScheme;
+namespace Aweapi\Tests\Openapi\Objects\SecurityScheme;
 
 use Aweapi\Openapi\Objects\SecurityScheme\HttpSecurityScheme;
 use Aweapi\Tests\Openapi\TestCase;
